@@ -1,0 +1,125 @@
+* {
+    font-family: "Bookman Old Style", serif
+}
+
+label {
+    margin-left: -50px;
+}
+label.result {
+    font-size: 60px;
+    margin-left: 220px;
+    color: aliceblue;
+    display: flex;
+
+  justify-content: center;
+  text-align: center;
+
+}
+
+button {
+    margin-left: 15%;
+    transform: translate(-50%, 0%);
+    border-radius: 10px;
+    border: 5px black;
+    align-content: center;
+    background-color: #ef45aa;
+    width: 120px;
+    height: 35px;
+    font-size: 15px;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+
+}
+
+td {
+    border: solid 1px #000;
+    border-style: none solid solid none;
+    padding: 10px;
+    height: 20%;
+}
+
+tr {
+    height: 20px;
+}
+
+tr:first-child td:first-child { border-top-left-radius: 10px; }
+tr:first-child td:last-child { border-top-right-radius: 10px; }
+
+tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+
+tr:first-child td { border-top-style: solid; }
+tr td:first-child { border-left-style: solid; }
+
+.input-field {
+    width: 100%;
+    height: 500px;
+    border: 10px black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.child-container {
+    position: absolute;
+    margin-top: 5%;
+    background-color: #ec8ccd;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    height: 600px;
+}
+/*djn jfcvfv*/
+.image-container {
+    position: absolute;
+    margin-top: 40.5%;
+    margin-left: 18px;
+
+}
+
+.parent-container {
+    display: flex;
+    justify-content: left;
+    height: 100%;
+    width: 100%;
+    background-color: #bb70e7;
+    position: fixed;
+    margin-left: -8px;
+    margin-top: -8px;
+}
+
+#table-area {
+    margin-left: 55%;
+    overflow-y: scroll;
+    display: flex;
+}
+
+#input-area {
+     margin-left: 9%;
+    text-align: center;
+
+}
+
+#right-table {
+    float: right;
+    text-align: center;
+    display: block;
+    width: 50%;
+    margin-left: 5px;
+}
+
+#left-table {
+    float: left;
+    text-align: center;
+    display: block;
+    width: 50%;
+}
+/*ftgfjghjghj*/
+img {
+    display: block;
+    width: 120px;
+    height: 120px;
+}

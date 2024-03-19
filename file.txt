@@ -1,0 +1,103 @@
+def add_numbers(num1, num2)
+  return num1 + num2
+end
+
+def flip_text(text)
+  return text.reverse
+end
+
+def calculate_fact(num)
+  result = 1
+  for i in 1..num do
+    result *= i
+  end
+  return result
+end
+
+def total_up_to(num)
+  total = 0
+  i = 1
+  while i <= num do
+    total += i
+    i += 1
+  end
+  return total
+end
+
+def comp_math_func(x)
+  root = Math.sqrt(x)
+  sine = Math.sin(x)
+  return root, sine
+end
+
+def exec_op(a, b)
+  a += b
+  a -= b
+  a *= b
+  a %= b
+  return a
+end
+
+def highest_of_3(a, b, c)
+  if a >= b && a >= c
+    return "#{a} is the highest"
+  elsif b >= a && b >= c
+    return "#{b} is the highest"
+  else
+    return "#{c} is the highest"
+  end
+end
+
+def check_pos_and_ev(number)
+  if number > 0 && number % 2 == 0
+    return "#{number} is positive and even"
+  else
+    return "#{number} does not meet the conditions"
+  end
+end
+
+puts "Welcome to the program! Please select an option:"
+puts "1. Welcome a user"
+puts "2. Add two numbers"
+puts "3. Flip a text"
+puts "4. Calculate a factorial"
+puts "5. Total numbers up to a given number"
+
+option = gets.chomp.to_i
+
+case option
+when 1
+  puts "Enter a name:"
+  name = gets.chomp
+  welcome_user(name)
+when 2
+  puts "Enter two numbers:"
+  num1 = gets.chomp.to_i
+  num2 = gets.chomp.to_i
+  puts add_numbers(num1, num2)
+when 3
+  puts "Enter a text:"
+  text = gets.chomp
+  puts flip_text(text)
+when 4
+  puts "Enter a number:"
+  num = gets.chomp.to_i
+  puts calculate_factorial(num)
+when 5
+  puts "Enter a number:"
+  num = gets.chomp.to_i
+  puts total_up_to(num)
+when 6
+  puts "Enter a number:"
+  x = gets.chomp.to_f
+  root, sine = compute_math_functions(x)
+  puts "Square root: #{root}"
+  puts "Sine: #{sine}"
+when 7
+  puts "Enter two numbers:"
+  a = gets.chomp.to_i
+  b = gets.chomp.to_i
+  puts execute_operations(a, b)
+else
+  puts "Invalid option"
+end

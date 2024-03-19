@@ -1,0 +1,105 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parser</title>
+
+    <link rel='stylesheet' href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <div class="parent-container">
+    
+        <div class="child-container" id="input-area">
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <p>
+                    <button type="submit" class="notes-button">Parse</button>
+                </p>
+            </form>
+        </div>
+     <div id="result_pr">
+            <label class = "result">
+                {{ result_str }}
+            </label>
+        </div>
+{#    dhfgljdhfsdgfgdsfghjldsgerytuoyerhdbfgsgejrytretghghchg#}
+        <div class="image-container">
+             <p><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" alt="р"></p>
+        </div>
+ 
+        <div class="child-container" id="table-area">
+            <div id="left-table">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <p>OPERATORS</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>name:</p>
+                        </td>
+                        <td>
+                            <p>count:</p>
+                        </td>
+                    </tr>
+
+                        {% for key, value in operators.items %}
+                            <tr>
+                            <td>
+                                <p>{{ key }}</p>
+                            </td>
+                            <td>
+                                <p>{{ value }}</p>
+                            </td>
+                            </tr>
+                        {% endfor %}
+
+                </table>
+            </div>
+
+            <div id="right-table">
+                <table>
+                    <tr>
+                        <td colspan="2">
+                            <p>OPERANDS</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <p>name:</p>
+                        </td>
+                        <td>
+                            <p>count:</p>
+                        </td>
+                    </tr>
+
+                    {% for key, value in operands.items %}
+                            <tr>
+                            <td>
+                                <p>{{ key }}</p>
+                            </td>
+                            <td>
+                                <p>{{ value }}</p>
+                            </td>
+                            </tr>
+                        {% endfor %}
+
+                </table>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>
